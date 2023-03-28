@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB17373829D356710052C2BA /* menu.json in Resources */ = {isa = PBXBuildFile; fileRef = FB17373729D356710052C2BA /* menu.json */; };
 		FBAF3DA729CB3E5000FC7E44 /* LittleLemonDinnerMenuApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAF3DA629CB3E5000FC7E44 /* LittleLemonDinnerMenuApp.swift */; };
 		FBAF3DA929CB3E5000FC7E44 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAF3DA829CB3E5000FC7E44 /* ContentView.swift */; };
 		FBAF3DAB29CB3E5200FC7E44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBAF3DAA29CB3E5200FC7E44 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB17373729D356710052C2BA /* menu.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = menu.json; path = "../../additional materials/Reservation-for-the-Little-Lemon-restaurant/menu.json"; sourceTree = "<group>"; };
 		FBAF3DA329CB3E5000FC7E44 /* LittleLemonDinnerMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LittleLemonDinnerMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBAF3DA629CB3E5000FC7E44 /* LittleLemonDinnerMenuApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LittleLemonDinnerMenuApp.swift; sourceTree = "<group>"; };
 		FBAF3DA829CB3E5000FC7E44 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,6 +53,7 @@
 		FBAF3DA529CB3E5000FC7E44 /* LittleLemonDinnerMenu */ = {
 			isa = PBXGroup;
 			children = (
+				FB17373729D356710052C2BA /* menu.json */,
 				FBAF3DA629CB3E5000FC7E44 /* LittleLemonDinnerMenuApp.swift */,
 				FBAF3DA829CB3E5000FC7E44 /* ContentView.swift */,
 				FBAF3DAA29CB3E5200FC7E44 /* Assets.xcassets */,
@@ -125,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB17373829D356710052C2BA /* menu.json in Resources */,
 				FBAF3DAE29CB3E5200FC7E44 /* Preview Assets.xcassets in Resources */,
 				FBAF3DAB29CB3E5200FC7E44 /* Assets.xcassets in Resources */,
 			);

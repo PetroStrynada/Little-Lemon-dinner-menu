@@ -1,0 +1,214 @@
+{
+    "sections": [
+        {
+            "id": "2f5b9994-898f-4df1-8748-d6ecf7453c21",
+            "name": "Food",
+            "items": [
+                {
+                    "id": "97ce8279-3257-445c-9e95-37dfee973e29",
+                    "name": "Mediterranean potatoes",
+                    "price": 2,23,
+                    "popularityRank": 10,
+                    "mealWeight": "270",
+                    "ingredients": "Fried potatoes with mushrooms, green butter and herbs"
+                },
+                {
+                    "id": "aad7247b-8f49-480a-b9e0-66f5bf823944",
+                    "name": "Pasta Carbonara",
+                    "price": 3,48,
+                    "popularityRank": 4,
+                    "mealWeight": "260",
+                    "ingredients": "Tagliatelle with bacon and ham in a cream sauce, with garlic and parmesan cheese"
+                },
+                {
+                    "id": "9f3d29f2-a938-4a00-b28d-5bbb24924547",
+                    "name": "Chicken in sweet and sour sauce",
+                    "price": 6,23,
+                    "popularityRank": 6,
+                    "mealWeight": "375",
+                    "ingredients": "Chicken, bell pepper, red onion, pineapple, carrot, peanut, sweet and sour sauce"
+                },
+                {
+                    "id": "d3991aa7-ec69-4ef6-aa7b-5666acf9f3bd",
+                    "name": "Lasagna Bolognese",
+                    "price": 4,23,
+                    "popularityRank": 14,
+                    "mealWeight": "320/25",
+                    "ingredients": "Lasagna with homemade pasta, signature bolognese sauce, cream sauce, mozzarella cheese, parmesan, arugula and cherry tomatoes"
+                },
+                {
+                    "id": "29533a91-81de-45e7-aa83-7bf8eba8fec2",
+                    "name": "Pasta with salmon and shrimp",
+                    "price": 6,23,
+                    "popularityRank": 3,
+                    "mealWeight": "365",
+                    "ingredients": "Tagliatelle with salmon and shrimp, tomatoes, zucchini, cream sauce and parmesan cheese"
+                },
+                {
+                    "id": "71d9ac33-6d3f-475a-991a-4c8e4e97ae7a",
+                    "name": "Fried noodles with chicken",
+                    "price": 4,98,
+                    "popularityRank": 8,
+                    "mealWeight": "350/15",
+                    "ingredients": "Noodles, chicken, egg, vegetables and mushrooms, thai sauce"
+                },
+                {
+                    "id": "eeb9646a-d791-4581-be13-3ff256dd536c",
+                    "name": "Fried rice with chicken",
+                    "price": 4,23,
+                    "popularityRank": 18,
+                    "mealWeight": "330/15",
+                    "ingredients": "Jasmine rice, chicken, egg, beans, vegetables and mushrooms, thai sauce"
+                },
+                {
+                    "id": "e6c062c4-11fa-4c90-b648-0ec236d0ae29",
+                    "name": "Chicken wings in sauce",
+                    "price": 4,98,
+                    "popularityRank": 11,
+                    "mealWeight": "250/100",
+                    "ingredients": "Chicken wings in beer sauce, potato dips"
+                },
+                {
+                    "id": "a6ff6b6e-c51a-4256-812f-ff461b23a00c",
+                    "name": "Caesar",
+                    "price": 4,98,
+                    "popularityRank": 7,
+                    "mealWeight": "275",
+                    "ingredients": "Chicken fillet, crispy bacon, tomatoes, salad mix, quail egg, parmesan cheese, croutons with green oil and garlic, caesar sauce"
+                },
+                {
+                    "id": "ec4fba27-b752-49ff-9129-71116f9c2292",
+                    "name": "Greek",
+                    "price": 3,48,
+                    "popularityRank": 23,
+                    "mealWeight": "245",
+                    "ingredients": "Tomatoes, sweet pepper, cucumbers, romaine lettuce, feta cheese, red onion, oregano, olive oil, balsamic sauce"
+                },
+                {
+                    "id": "e3133889-5ef9-42ee-9b34-5da385ff55ed",
+                    "name": "Ukrainian borsch",
+                    "price": 2,48,
+                    "popularityRank": 1,
+                    "mealWeight": "350/20/50",
+                    "ingredients": "Chicken broth, sous-vide chicken fillet, potatoes, carrots, beets, onions, cabbage, tomato paste, parsley. Served with sour cream, pieces of lard and brown bread with garlic sauce"
+                },
+                {
+                    "id": "bda57458-33ea-4054-a89d-905517375b23",
+                    "name": "Ramen",
+                    "price": 4,48,
+                    "popularityRank": 24,
+                    "mealWeight": "350",
+                    "ingredients": "Classic ramen soup with egg noodles, spicy pork belly, pickled egg and fried sesame"
+                }
+            ]
+        },
+        {
+            "id": "e322f0ca-02f9-496d-b28f-564ec6c47f54",
+            "name": "Drinks",
+            "items": [
+                {
+                    "id": "ac6d6b84-c637-415c-aed2-9b143acdf532",
+                    "name": "Pepsi",
+                    "price": 1,13,
+                    "popularityRank": 15,
+                    "mealWeight": "500",
+                    "ingredients": "Soda. Carbonated"
+                },
+                {
+                    "id": "601efd0e-f26f-4254-b9a0-652d6725d8d0",
+                    "name": "Pepsi Black",
+                    "price": 1,13,
+                    "popularityRank": 21,
+                    "mealWeight": "500",
+                    "ingredients": "Soda. Carbonated"
+                },
+                {
+                    "id": "ac8cc682-e58a-4e96-a6c4-50e5edd41120",
+                    "name": "Borjomi",
+                    "price": 2,13,
+                    "popularityRank": 2,
+                    "mealWeight": "500",
+                    "ingredients": "Mineral water. Carbonated"
+                },
+                {
+                    "id": "645a5e20-238c-40a0-ad43-76a817cf1912",
+                    "name": "Morshinska",
+                    "price": 1,23,
+                    "popularityRank": 20,
+                    "mealWeight": "500",
+                    "ingredients": "Water"
+                },
+                {
+                    "id": "7dc4041f-cd4f-4fc3-986b-cb8805f9be5c",
+                    "name": "Blanche",
+                    "price": 1,8,
+                    "popularityRank": 9,
+                    "mealWeight": "500",
+                    "ingredients": "Beer"
+                },
+                {
+                    "id": "a8812afc-fa42-4965-85b6-14c04089cba5",
+                    "name": "Lager",
+                    "price": 1,63,
+                    "popularityRank": 17,
+                    "mealWeight": "500",
+                    "ingredients": "Beer"
+                },
+                {
+                    "id": "b72f91e0-e341-4b48-a10f-d89f6f0f6064",
+                    "name": "Jack Daniels",
+                    "price": 37,48,
+                    "popularityRank": 12,
+                    "mealWeight": "1000",
+                    "ingredients": "Whiskey"
+                },
+                {
+                    "id": "3bf595b6-f055-4f8c-a70b-67f688fb4314",
+                    "name": "Jameson",
+                    "price": 37,48,
+                    "popularityRank": 22,
+                    "mealWeight": "1000",
+                    "ingredients": "Whiskey"
+                }
+            ]
+        },
+        {
+            "id": "f39897c7-36d5-4a54-bf5b-0d7521a6e308",
+            "name": "Dessert",
+            "items": [
+                {
+                    "id": "26c66ec4-17f3-4c9d-9632-c44f495a9f79",
+                    "name": "Classic cheesecake",
+                    "price": 2,88,
+                    "popularityRank": 16,
+                    "mealWeight": "140",
+                    "ingredients": "A classic cream cheese dessert based on shortcrust pastry"
+                },
+                {
+                    "id": "a69dc40c-b30e-4b32-ada2-16aae665a287",
+                    "name": "Napoleon",
+                    "price": 2,98,
+                    "popularityRank": 5,
+                    "mealWeight": "120",
+                    "ingredients": "Delicate puff pastry with vanilla custard and caramel sauce"
+                },
+                {
+                    "id": "557eac8f-13b7-4ab8-b1d1-7fe395b58110",
+                    "name": "Basque Cheesecake",
+                    "price": 3,23,
+                    "popularityRank": 19,
+                    "mealWeight": "150",
+                    "ingredients": "Classic Basque cheesecake with sour cream"
+                },
+                {
+                    "id": "c54ddd3f-55a9-4e3c-af36-9027e618a8fc",
+                    "name": "Nut tart with caramel",
+                    "price": 2,88,
+                    "popularityRank": 13,
+                    "mealWeight": "70",
+                    "ingredients": "Shortbread Tart with Walnut and Salted Caramel"
+                }
+            ]
+        }
+    ]
+}
