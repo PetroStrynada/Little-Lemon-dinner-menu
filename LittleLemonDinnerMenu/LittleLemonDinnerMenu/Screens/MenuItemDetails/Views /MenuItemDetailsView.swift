@@ -12,7 +12,37 @@ struct MenuItemDetailsView: View {
     let meal: Meal
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            VStack {
+                Image(meal.image)
+                    .resizable()
+                    .scaledToFit()
+                
+                Text("Price:")
+                    .headerStyle()
+
+                Text("\(meal.price.removeZerosFromEnd()) USD")
+                    .bodyStyle()
+                
+                //.removeZerosFromEnd()
+                
+                Text("Popularity rank:")
+                    .headerStyle()
+                
+                Text("\(meal.popularityRank)")
+                    .bodyStyle()
+                
+                Text("Ingredients:")
+                    .headerStyle()
+                
+                Text(meal.ingredients)
+                    .bodyStyle()
+                    .multilineTextAlignment(.center)
+                
+                Spacer()
+            }
+            .navigationTitle(meal.name)
+        }
     }
 }
 

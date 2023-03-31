@@ -10,47 +10,33 @@ import SwiftUI
 struct MenuItemsView: View {
     @EnvironmentObject var menu: Menu
     
+    @State private var shovingFilter = false
+    
     let columns = [
         GridItem(.adaptive(minimum: 115), alignment: .top)
     ]
     
     var body: some View {
         NavigationView {
-            ScrollView {
-                LazyVGrid(columns: columns, pinnedViews: .sectionHeaders) {
-                    ForEach(menu.sections) { section in
-                        Section {
-                            ForEach(section.meal) { meal in
-                                NavigationLink {
-                                    MenuItemDetailsView(meal: meal)
-                                } label: {
-                                    VStack {
-                                        Image(meal.image)
-                                            .resizable()
-                                            .scaledToFit()
-                                            .cornerRadius(10)
-                                            
-                                        Text(meal.name)
-                                            .frame(minWidth: 117)
-                                            .font(.system(.body, design: .serif))
-                                            .multilineTextAlignment(.center)
-                                    }
-                                    .padding(.bottom)
-                                }
-                                .buttonStyle(.plain)
-                            }
-                        } header: {
-                            Text(section.name)
-                                .font(.system(.title, design: .serif))
-                                .frame(maxWidth: .infinity, alignment: .leading)
-                                .padding([.top, .bottom, .trailing], 5)
-                                .background(.background)
-                        }
-                    }
-                }
-                .padding(.horizontal)
-            }
+            GridView()
+            .buttonStyle(.plain)
+            .sheet(isPresented: $shovingFilter, content: MenuItemsOptionView.init)
             .navigationTitle("Menu")
+            .toolbar {
+                filterButton
+            }
+        }
+    }
+    
+    func shoveFilter() {
+        shovingFilter = true
+    }
+    
+    var filterButton: some View {
+        Button {
+            shoveFilter()
+        } label: {
+            Label("Filter", systemImage: "slider.horizontal.3")
         }
     }
 }
