@@ -13,20 +13,24 @@ extension Text {
         self
             .font(.system(.title, design: .serif))
     }
-}
-
-extension Text {
+    
     func headerStyle() -> some View {
         self
             .font(.system(.title3, design: .serif))
             .bold()
     }
-}
-
-extension Text {
+    
     func bodyStyle() -> some View {
         self
             .font(.system(.body, design: .serif))
+    }
+}
+
+extension Image {
+    func imageStyle() -> some View {
+        self
+            .resizable()
+            .scaledToFit()
     }
 }
 
@@ -34,8 +38,8 @@ extension Double {
     func removeZerosFromEnd() -> String {
         let formatter = NumberFormatter()
         let number = NSNumber(value: self)
-        formatter.minimumFractionDigits = 0
-        formatter.maximumFractionDigits = 16 //maximum digits in Double after dot (maximum precision)
+        formatter.minimumFractionDigits = 2
+        formatter.maximumFractionDigits = 16
         return String(formatter.string(from: number) ?? "")
     }
 }
