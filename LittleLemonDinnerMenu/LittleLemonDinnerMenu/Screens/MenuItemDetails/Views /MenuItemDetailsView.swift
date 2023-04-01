@@ -13,36 +13,34 @@ struct MenuItemDetailsView: View {
     
     var body: some View {
         NavigationView {
-            VStack {
-                Image(meal.image)
-                    .resizable()
-                    .scaledToFit()
-                
-                Text("Price:")
-                    .headerStyle()
+            ScrollView {
+                VStack(spacing: 5) {
+                    Image(meal.image)
+                        .imageStyle()
+                    
+                    Text(meal.name)
+                        .headerStyle()
+                    
+                    Text("Price:")
+                        .headerStyle()
 
-                Text("\(meal.price.removeZerosFromEnd()) USD")
-                    .bodyStyle()
-                
-                //.removeZerosFromEnd()
-                
-                Text("Popularity rank:")
-                    .headerStyle()
-                
-                Text("\(meal.popularityRank)")
-                    .bodyStyle()
-                
-                Text("Ingredients:")
-                    .headerStyle()
-                
-                Text(meal.ingredients)
-                    .bodyStyle()
-                    .multilineTextAlignment(.center)
-                
-                Spacer()
+                    Text("\(meal.price.removeZerosFromEnd()) USD")
+                        .bodyStyle()
+                    
+                    Text("Ingredients:")
+                        .headerStyle()
+                    
+                    Text(meal.ingredients)
+                        .bodyStyle()
+                        .multilineTextAlignment(.center)
+                        .frame(maxWidth: 200)
+                    
+                    Spacer()
+                    
+                }
             }
-            .navigationTitle(meal.name)
         }
+        .navigationTitle("Ranking \(meal.popularityRank)")
     }
 }
 

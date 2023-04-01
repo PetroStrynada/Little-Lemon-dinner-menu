@@ -194,11 +194,11 @@
                 },
                 {
                     "id": "557eac8f-13b7-4ab8-b1d1-7fe395b58110",
-                    "name": "Basque Cheesecake",
+                    "name": "Basque cheesecake",
                     "price": 3.23,
                     "popularityRank": 19,
                     "mealWeight": "150",
-                    "ingredients": "Classic Basque cheesecake with sour cream"
+                    "ingredients": "Classic basque cheesecake with sour cream"
                 },
                 {
                     "id": "c54ddd3f-55a9-4e3c-af36-9027e618a8fc",
@@ -206,7 +206,7 @@
                     "price": 2.88,
                     "popularityRank": 13,
                     "mealWeight": "70",
-                    "ingredients": "Shortbread Tart with Walnut and Salted Caramel"
+                    "ingredients": "Shortbread tart with walnut and salted caramel"
                 }
             ]
         }

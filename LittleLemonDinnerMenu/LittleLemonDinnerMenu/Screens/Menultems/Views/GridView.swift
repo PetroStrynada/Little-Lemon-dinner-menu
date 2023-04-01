@@ -24,10 +24,12 @@ struct GridView: View {
                                 MenuItemDetailsView(meal: meal)
                             } label: {
                                 VStack {
-                                    MealImageView.init(meal: meal)
+                                    Image(meal.image)
+                                        .imageStyle()
                                         .cornerRadius(10)
                                     
-                                    MealNameView(meal: meal)
+                                    Text(meal.name)
+                                        .bodyStyle()
                                         .multilineTextAlignment(.center)
                                         .frame(minWidth: 117) //so that the word "Mediterranean" fits on one line without wrapping the word in a grid with three lines
                                 }
