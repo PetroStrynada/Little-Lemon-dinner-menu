@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MenuSection: Identifiable, Codable {
+struct MenuSection: Codable, Identifiable {
     let id: UUID
     let name: String
     let meal: [Meal]

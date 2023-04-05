@@ -20,11 +20,10 @@ struct MenuItemsView: View {
         NavigationView {
             GridView()
             .buttonStyle(.plain)
-            .sheet(isPresented: $shovingFilter, content: MenuItemsOptionView.init)
+            .sheet(isPresented: $shovingFilter,
+                   content: MenuItemsOptionView.init)
             .navigationTitle("Menu")
-            .toolbar {
-                filterButton
-            }
+            .toolbar { filterButton }
         }
     }
     
