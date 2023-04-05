@@ -14,6 +14,10 @@ struct GridView: View {
         GridItem(.adaptive(minimum: 115), alignment: .top) //for 3 line grid
     ]
     
+    enum menuCategories {
+        case Food, Drink, Dessert
+    }
+    
     var body: some View {
         ScrollView {
             LazyVGrid(columns: columns, pinnedViews: .sectionHeaders) {
