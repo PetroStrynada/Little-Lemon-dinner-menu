@@ -24,27 +24,4 @@ class Menu: ObservableObject, Codable {
             fatalError("menu.json file is missing or corrupt")
         }
     }
-    
-    //MARK: - MenuItensOptionsView
-    
-
-    
-    
-    
-//
-//    
-//    func selectedCategoriesDefaultSettings() {
-//        if showSectionFood && showSectionDrink && showSectionDeserts == false {
-//            showAllSections = true
-//        } else {
-//            showAllSections = false
-//        }
-//    }
-//    
-//    func selectedCategories() {
-//        if showSectionFood == true {
-//            
-//        }
-//    }
-    
 }

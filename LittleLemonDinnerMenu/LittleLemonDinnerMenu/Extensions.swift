@@ -8,23 +8,39 @@
 import Foundation
 import SwiftUI
 
+//MARK: View extensions
+
+extension View {
+    func showCheckMark() -> some View {
+        Image(systemName: "checkmark")
+            .imageForegroundColor()
+    }
+}
+
+//MARK: Text extension
+
 extension Text {
     func sectionHeaderStyle() -> some View {
         self
             .font(.system(.title, design: .serif))
+            .foregroundColor(.primary)
     }
     
     func headerStyle() -> some View {
         self
             .font(.system(.title3, design: .serif))
             .bold()
+            .foregroundColor(.primary)
     }
     
     func bodyStyle() -> some View {
         self
             .font(.system(.body, design: .serif))
+            .foregroundColor(.primary)
     }
 }
+
+//MARK: Image extensions
 
 extension Image {
     func imageStyle() -> some View {
@@ -32,7 +48,14 @@ extension Image {
             .resizable()
             .scaledToFit()
     }
+    
+    func imageForegroundColor() -> some View {
+        self
+            .foregroundColor(.primary)
+    }
 }
+
+//MARK: Double extensions
 
 extension Double {
     func removeZerosFromEnd() -> String {
@@ -43,6 +66,8 @@ extension Double {
         return String(formatter.string(from: number) ?? "")
     }
 }
+
+//MARK: FileManager extensions
 
 extension FileManager {
     static var documentsDirectory: URL {
