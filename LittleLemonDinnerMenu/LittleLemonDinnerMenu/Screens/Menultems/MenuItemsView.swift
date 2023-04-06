@@ -10,7 +10,7 @@ import SwiftUI
 struct MenuItemsView: View {
     @EnvironmentObject var menu: Menu
     
-    @State private var shovingFilter = false
+    @State private var showingFilter = false
     
     let columns = [
         GridItem(.adaptive(minimum: 115), alignment: .top)
@@ -20,20 +20,20 @@ struct MenuItemsView: View {
         NavigationView {
             GridView()
             .buttonStyle(.plain)
-            .sheet(isPresented: $shovingFilter,
+            .sheet(isPresented: $showingFilter,
                    content: MenuItemsOptionView.init)
             .navigationTitle("Menu")
             .toolbar { filterButton }
         }
     }
     
-    func shoveFilter() {
-        shovingFilter = true
+    func showFilter() {
+        showingFilter = true
     }
     
     var filterButton: some View {
         Button {
-            shoveFilter()
+            showFilter()
         } label: {
             Label("Filter", systemImage: "slider.horizontal.3")
         }
@@ -44,5 +44,6 @@ struct MenuItemsView_Previews: PreviewProvider {
     static var previews: some View {
         MenuItemsView()
             .environmentObject(Menu())
+            .environmentObject(MenuOption())
     }
 }
