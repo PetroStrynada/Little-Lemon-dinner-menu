@@ -44,12 +44,8 @@ struct MenuItemsOptionView: View {
     }
     
     func checkMark(menuOptionSection: Bool) -> Image {
-        switch menuOptionSection {
-        case true:
-            return Image(systemName: "checkmark")
-        default:
-            return Image("")
-        }
+        guard menuOptionSection else { return Image("") }
+        return Image(systemName: "checkmark")
     }
     
     //MARK: - Buttons for "SELECTED CATEGORIES"
@@ -113,7 +109,6 @@ struct MenuItemsOptionView: View {
         }
     }
 
-    //MARK: - fix the logic of the button
     var sortByPriceButton: some View {
         Button {
             menuOption.showSortByPrice()
@@ -130,7 +125,6 @@ struct MenuItemsOptionView: View {
         }
     }
 
-    //MARK: - fix the logic of the button
     var sortByABCButton: some View {
         Button {
             menuOption.showSortByABC()

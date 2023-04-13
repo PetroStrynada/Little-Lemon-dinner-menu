@@ -9,10 +9,10 @@ import Foundation
 
 class MenuOption: ObservableObject {
     
-    @Published var allSections: Bool
     @Published  var sectionFood: Bool
     @Published  var sectionDrink: Bool
     @Published  var sectionDesserts: Bool
+    @Published  var allSections: Bool
 
     @Published  var sortByPopular: Bool
     @Published  var sortByPrice: Bool
@@ -20,10 +20,10 @@ class MenuOption: ObservableObject {
     
     init() {
         do {
-            allSections = true
-            sectionFood = false
-            sectionDrink = false
-            sectionDesserts = false
+            sectionFood = true
+            sectionDrink = true
+            sectionDesserts = true
+            allSections = false
 
             sortByPopular = false
             sortByPrice = false
@@ -32,14 +32,6 @@ class MenuOption: ObservableObject {
     }
     
     //MARK: SELECTED CATEGORIES
-    
-    func showAllSections() {
-        if sectionFood == false && sectionDrink == false && sectionDesserts == false {
-            allSections = true
-        } else {
-            allSections = false
-        }
-    }
     
     func showFoodSection() {
         if sectionFood == false {
@@ -64,6 +56,7 @@ class MenuOption: ObservableObject {
             sectionDesserts = false
         }
     }
+    
     
     //MARK: SORT BY
     

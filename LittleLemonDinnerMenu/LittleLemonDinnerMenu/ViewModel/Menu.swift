@@ -9,8 +9,6 @@
 import Foundation
 
 class Menu: ObservableObject, Codable {
-    //MARK: - MenuItemsView
-    
     let sections: [MenuSection]
     
     init() {
@@ -20,6 +18,9 @@ class Menu: ObservableObject, Codable {
             let menuData = try JSONDecoder().decode(Menu.self, from: data)
             
             sections = menuData.sections
+            
+            
+            
         } catch {
             fatalError("menu.json file is missing or corrupt")
         }
