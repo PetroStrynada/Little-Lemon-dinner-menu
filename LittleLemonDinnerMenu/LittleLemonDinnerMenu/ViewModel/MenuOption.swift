@@ -12,7 +12,6 @@ class MenuOption: ObservableObject {
     @Published  var sectionFood: Bool
     @Published  var sectionDrink: Bool
     @Published  var sectionDesserts: Bool
-    @Published  var allSections: Bool
 
     @Published  var sortByPopular: Bool
     @Published  var sortByPrice: Bool
@@ -20,10 +19,9 @@ class MenuOption: ObservableObject {
     
     init() {
         do {
-            sectionFood = true
-            sectionDrink = true
-            sectionDesserts = true
-            allSections = false
+            sectionFood = false
+            sectionDrink = false
+            sectionDesserts = false
 
             sortByPopular = false
             sortByPrice = false
@@ -57,16 +55,6 @@ class MenuOption: ObservableObject {
             sectionDesserts = true
         } else {
             sectionDesserts = false
-        }
-    }
-    
-    //Логіка функції showAllSections() не спрацьовує
-    
-    func showAllSections() {
-        if sectionFood == false && sectionDrink == false && sectionDesserts == false {
-            allSections = true
-        } else {
-            allSections = false
         }
     }
     
