@@ -19,8 +19,6 @@ class Menu: ObservableObject, Codable {
             
             sections = menuData.sections
             
-            
-            
         } catch {
             fatalError("menu.json file is missing or corrupt")
         }

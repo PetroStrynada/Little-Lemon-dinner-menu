@@ -33,6 +33,9 @@ class MenuOption: ObservableObject {
     
     //MARK: SELECTED CATEGORIES
     
+    //Переписати через guard
+    //Повтореня коду. Створити одну функцію. Наприклад, записати одну функцію яка буде приймати змінну Bool
+    
     func showFoodSection() {
         if sectionFood == false {
             sectionFood = true
@@ -57,8 +60,21 @@ class MenuOption: ObservableObject {
         }
     }
     
+    //Логіка функції showAllSections() не спрацьовує
+    
+    func showAllSections() {
+        if sectionFood == false && sectionDrink == false && sectionDesserts == false {
+            allSections = true
+        } else {
+            allSections = false
+        }
+    }
+    
     
     //MARK: SORT BY
+    
+    //Переписати через guard
+    //Повтореня коду. Створити одну функцію. Наприклад, записати одну функцію яка буде приймати змінну Bool
     
     func showSortByPopular() {
         if sortByPopular == false {
