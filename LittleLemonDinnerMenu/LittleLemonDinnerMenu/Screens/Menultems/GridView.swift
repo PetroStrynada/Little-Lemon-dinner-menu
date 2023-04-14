@@ -20,6 +20,8 @@ struct GridView: View {
             LazyVGrid(columns: columns, pinnedViews: .sectionHeaders) {
                 ForEach(menu.sections) { section in
                     
+                    //Повторення коду. Винести розділ Section в окреме View
+                    
                     if menuOption.sectionFood == true && section.name == "Food" {
                         Section {
                             ForEach(section.meal) { meal in
@@ -103,6 +105,8 @@ struct GridView: View {
                                 .background(.background)
                         }
                     }
+                    
+                    //Логіка функції showAllSections() не спрацьовує
                     
                     if menuOption.allSections == true {
                         Section {

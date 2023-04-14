@@ -50,6 +50,8 @@ struct MenuItemsOptionView: View {
     
     //MARK: - Buttons for "SELECTED CATEGORIES"
     
+    //Повторення коду. Створити одну кнопку
+    
     var foodFilterButton: some View {
         Button {
             menuOption.showFoodSection()
@@ -93,6 +95,8 @@ struct MenuItemsOptionView: View {
     }
 
     //MARK: - Buttons for "SORT BY"
+    
+    //Повторення коду. Створити одну кнопку
 
     var sortByPopularButton: some View {
         Button {
@@ -139,7 +143,6 @@ struct MenuItemsOptionView: View {
             }
         }
     }
-    
 }
 
 struct MenuItemsOptionView_Previews: PreviewProvider {
