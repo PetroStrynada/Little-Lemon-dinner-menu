@@ -36,7 +36,6 @@ struct MenuItemDetailsView: View {
                         .frame(maxWidth: 200)
                     
                     Spacer()
-                    
                 }
             }
         }
