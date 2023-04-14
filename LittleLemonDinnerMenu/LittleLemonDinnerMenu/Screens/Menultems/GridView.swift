@@ -22,6 +22,34 @@ struct GridView: View {
                     
                     //Повторення коду. Винести розділ Section в окреме View
                     
+                    if menuOption.sectionFood == false && menuOption.sectionDrink == false && menuOption.sectionDesserts == false {
+                        Section {
+                            ForEach(section.meal) { meal in
+                                NavigationLink {
+                                    MenuItemDetailsView(meal: meal)
+                                } label: {
+                                    VStack {
+                                        Image(meal.image)
+                                            .imageStyle()
+                                            .cornerRadius(10)
+                                        
+                                        Text(meal.name)
+                                            .bodyStyle()
+                                            .multilineTextAlignment(.center)
+                                            .frame(minWidth: 117) //so that the word "Mediterranean" fits on one line without wrapping the word in a grid with three lines
+                                    }
+                                    .padding(.bottom)
+                                }
+                            }
+                        } header: {
+                            Text(section.name)
+                                .sectionHeaderStyle()
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .padding([.top, .bottom, .trailing], 5)
+                                .background(.background)
+                        }
+                    }
+                    
                     if menuOption.sectionFood == true && section.name == "Food" {
                         Section {
                             ForEach(section.meal) { meal in
@@ -105,37 +133,7 @@ struct GridView: View {
                                 .background(.background)
                         }
                     }
-                    
-                    //Логіка функції showAllSections() не спрацьовує
-                    
-                    if menuOption.allSections == true {
-                        Section {
-                            ForEach(section.meal) { meal in
-                                NavigationLink {
-                                    MenuItemDetailsView(meal: meal)
-                                } label: {
-                                    VStack {
-                                        Image(meal.image)
-                                            .imageStyle()
-                                            .cornerRadius(10)
-                                        
-                                        Text(meal.name)
-                                            .bodyStyle()
-                                            .multilineTextAlignment(.center)
-                                            .frame(minWidth: 117) //so that the word "Mediterranean" fits on one line without wrapping the word in a grid with three lines
-                                    }
-                                    .padding(.bottom)
-                                }
-                            }
-                        } header: {
-                            Text(section.name)
-                                .sectionHeaderStyle()
-                                .frame(maxWidth: .infinity, alignment: .leading)
-                                .padding([.top, .bottom, .trailing], 5)
-                                .background(.background)
-                        }
-                    }
-
+        
                     
                     
                 }
