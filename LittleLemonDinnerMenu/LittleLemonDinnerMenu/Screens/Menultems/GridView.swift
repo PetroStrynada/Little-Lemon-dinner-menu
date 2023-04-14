@@ -141,11 +141,6 @@ struct GridView: View {
             .padding(.horizontal)
         }
     }
-    
-    func checkMark(menuOptionSection: Bool) -> Image {
-        guard menuOptionSection else { return Image("") }
-        return Image(systemName: "checkmark")
-    }
 }
 
 struct GridView_Previews: PreviewProvider {

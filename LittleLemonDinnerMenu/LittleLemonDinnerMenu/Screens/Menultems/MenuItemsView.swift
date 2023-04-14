@@ -12,10 +12,6 @@ struct MenuItemsView: View {
     
     @State private var showingFilter = false
     
-    let columns = [
-        GridItem(.adaptive(minimum: 115), alignment: .top)
-    ]
-    
     var body: some View {
         NavigationView {
             GridView()
