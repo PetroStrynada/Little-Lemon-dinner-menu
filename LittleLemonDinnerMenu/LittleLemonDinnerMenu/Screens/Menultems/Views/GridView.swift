@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct GridView: View {
-    @EnvironmentObject var menu: Menu
+    @EnvironmentObject var menu: NetworkManager
     @EnvironmentObject var menuOption: MenuOption
     
     let columns = [
@@ -30,8 +30,7 @@ struct GridView: View {
                                 } label: {
                                     VStack {
                                         Image(meal.image)
-                                            .imageStyle()
-                                            .cornerRadius(10)
+                                            .imageStyleForGrid()
                                         
                                         Text(meal.name)
                                             .bodyStyle()
@@ -58,8 +57,7 @@ struct GridView: View {
                                 } label: {
                                     VStack {
                                         Image(meal.image)
-                                            .imageStyle()
-                                            .cornerRadius(10)
+                                            .imageStyleForGrid()
                                         
                                         Text(meal.name)
                                             .bodyStyle()
@@ -86,8 +84,7 @@ struct GridView: View {
                                 } label: {
                                     VStack {
                                         Image(meal.image)
-                                            .imageStyle()
-                                            .cornerRadius(10)
+                                            .imageStyleForGrid()
                                         
                                         Text(meal.name)
                                             .bodyStyle()
@@ -114,8 +111,7 @@ struct GridView: View {
                                 } label: {
                                     VStack {
                                         Image(meal.image)
-                                            .imageStyle()
-                                            .cornerRadius(10)
+                                            .imageStyleForGrid()
                                         
                                         Text(meal.name)
                                             .bodyStyle()
@@ -146,7 +142,7 @@ struct GridView: View {
 struct GridView_Previews: PreviewProvider {
     static var previews: some View {
         GridView()
-            .environmentObject(Menu())
+            .environmentObject(NetworkManager())
             .environmentObject(MenuOption())
     }
 }

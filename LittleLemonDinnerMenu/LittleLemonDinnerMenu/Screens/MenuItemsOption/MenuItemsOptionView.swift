@@ -9,7 +9,7 @@ import SwiftUI
 
 
 struct MenuItemsOptionView: View {
-    @EnvironmentObject var menu: Menu
+
     @EnvironmentObject var menuOption: MenuOption
     
     @Environment(\.dismiss) var dismiss
@@ -43,9 +43,9 @@ struct MenuItemsOptionView: View {
         }
     }
     
-    func checkMark(menuOptionSection: Bool) -> Image {
+    func showingCheckMark(forCondition menuOptionSection: Bool) -> some View {
         guard menuOptionSection else { return Image("") }
-        return Image(systemName: "checkmark")
+        return checkMark()
     }
     
     //MARK: - Buttons for "SELECTED CATEGORIES"
@@ -58,40 +58,37 @@ struct MenuItemsOptionView: View {
         } label: {
             HStack {
                 Text("Food")
-                    .bodyStyle()
                 Spacer()
-                checkMark(menuOptionSection: menuOption.sectionFood)
-                    .imageForegroundColor()
+                showingCheckMark(forCondition: menuOption.sectionFood)
             }
         }
+        .customFont(.body)
     }
     
     var drinkFilterButton: some View {
         Button {
             menuOption.showDrinkSection()
         } label: {
-                HStack {
-                    Text("Drink")
-                        .bodyStyle()
-                    Spacer()
-                    checkMark(menuOptionSection: menuOption.sectionDrink)
-                        .imageForegroundColor()
+            HStack {
+                Text("Drink")
+                Spacer()
+                showingCheckMark(forCondition: menuOption.sectionDrink)
             }
         }
+        .customFont(.body)
     }
 
     var dessertFilterButton: some View {
         Button {
             menuOption.showDessertsSection()
         } label: {
-                HStack {
-                    Text("Dessert")
-                        .bodyStyle()
-                    Spacer()
-                    checkMark(menuOptionSection: menuOption.sectionDesserts)
-                        .imageForegroundColor()
+            HStack {
+                Text("Dessert")
+                Spacer()
+                showingCheckMark(forCondition: menuOption.sectionDesserts)
             }
         }
+        .customFont(.body)
     }
 
     //MARK: - Buttons for "SORT BY"
@@ -102,53 +99,47 @@ struct MenuItemsOptionView: View {
         Button {
             menuOption.showSortByPopular()
         } label: {
-                HStack {
-                    Text("Most Popular")
-                        .bodyStyle()
-                    Spacer()
-                    if menuOption.sortByPopular == true {
-                        showCheckMark()
-                }
+            HStack {
+                Text("Most Popular")
+                Spacer()
+                showingCheckMark(forCondition: menuOption.sortByPopular)
             }
         }
+        .customFont(.body)
     }
 
     var sortByPriceButton: some View {
         Button {
             menuOption.showSortByPrice()
         } label: {
-                HStack {
-                    Text("Price $-$$$")
-                        .bodyStyle()
-                    Spacer()
-                    if menuOption.sortByPrice == true {
-                    Image(systemName: "checkmark")
-                        .imageForegroundColor()
-                }
+            HStack {
+                Text("Price $-$$$")
+                Spacer()
+                showingCheckMark(forCondition: menuOption.sortByPrice)
+
             }
         }
+        .customFont(.body)
     }
 
     var sortByABCButton: some View {
         Button {
             menuOption.showSortByABC()
         } label: {
-                HStack {
-                    Text("A-Z")
-                        .bodyStyle()
-                    Spacer()
-                    if menuOption.sortByABC == true {
-                        showCheckMark()
-                }
+            HStack {
+                Text("A-Z")
+                Spacer()
+                showingCheckMark(forCondition: menuOption.sortByABC)
             }
         }
+        .customFont(.body)
     }
 }
 
 struct MenuItemsOptionView_Previews: PreviewProvider {
     static var previews: some View {
         MenuItemsOptionView()
-            .environmentObject(Menu())
+            .environmentObject(NetworkManager())
             .environmentObject(MenuOption())
     }
 }

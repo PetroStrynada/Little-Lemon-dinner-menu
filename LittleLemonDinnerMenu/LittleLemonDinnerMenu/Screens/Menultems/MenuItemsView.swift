@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct MenuItemsView: View {
-    @EnvironmentObject var menu: Menu
     
     @State private var showingFilter = false
     
@@ -23,13 +22,9 @@ struct MenuItemsView: View {
         }
     }
     
-    func showFilter() {
-        showingFilter = true
-    }
-    
     var filterButton: some View {
         Button {
-            showFilter()
+            showingFilter.toggle()
         } label: {
             Label("Filter", systemImage: "slider.horizontal.3")
         }
@@ -39,7 +34,7 @@ struct MenuItemsView: View {
 struct MenuItemsView_Previews: PreviewProvider {
     static var previews: some View {
         MenuItemsView()
-            .environmentObject(Menu())
+            .environmentObject(NetworkManager())
             .environmentObject(MenuOption())
     }
 }
