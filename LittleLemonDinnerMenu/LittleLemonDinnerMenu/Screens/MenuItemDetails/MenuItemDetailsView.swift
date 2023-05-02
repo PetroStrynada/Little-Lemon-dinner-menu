@@ -16,22 +16,22 @@ struct MenuItemDetailsView: View {
             ScrollView {
                 VStack(spacing: 5) {
                     Image(meal.image)
-                        .imageStyle()
+                        .imageStyleResizableScaledToFit()
                     
                     Text(meal.name)
-                        .headerStyle()
+                        .customFont(.header)
                     
                     Text("Price:")
-                        .headerStyle()
+                        .customFont(.header)
 
-                    Text("\(meal.price.removeZerosFromEnd()) USD")
-                        .bodyStyle()
+                    Text("\(meal.price.doubleNumberFormattedToString(minimumFractionDigits: 2)) USD")
+                        .customFont(.body)
                     
                     Text("Ingredients:")
-                        .headerStyle()
+                        .customFont(.header)
                     
                     Text(meal.ingredients)
-                        .bodyStyle()
+                        .customFont(.body)
                         .multilineTextAlignment(.center)
                         .frame(maxWidth: 200)
                     

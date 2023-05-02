@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         MenuItemsView()
-            .environmentObject(Menu())
+            .environmentObject(NetworkManager())
             .environmentObject(MenuOption())
     }
 }
@@ -18,7 +18,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .environmentObject(Menu())
+            .environmentObject(NetworkManager())
             .environmentObject(MenuOption())
     }
 }

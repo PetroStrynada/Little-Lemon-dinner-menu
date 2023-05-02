@@ -35,27 +35,24 @@ class MenuOption: ObservableObject {
     //Повтореня коду. Створити одну функцію. Наприклад, записати одну функцію яка буде приймати змінну Bool
     
     func showFoodSection() {
-        if sectionFood == false {
-            sectionFood = true
-        } else {
-            sectionFood = false
-        }
+        sectionFood.toggle()
     }
     
     func showDrinkSection() {
-        if sectionDrink == false {
-            sectionDrink = true
-        } else {
-            sectionDrink = false
-        }
+        sectionDrink.toggle()
     }
     
     func showDessertsSection() {
-        if sectionDesserts == false {
-            sectionDesserts = true
-        } else {
-            sectionDesserts = false
-        }
+        sectionDesserts.toggle()
+    }
+
+    func showSectionConditionsCheck() {
+//        if menuOption.sectionFood == false && menuOption.sectionDrink == false && menuOption.sectionDesserts == false {
+//
+//        }
+//        if sectionFood == true && NetworkManager.sections.name == "Food" {
+//            print("hi")
+//        }
     }
     
     
@@ -63,35 +60,25 @@ class MenuOption: ObservableObject {
     
     //Переписати через guard
     //Повтореня коду. Створити одну функцію. Наприклад, записати одну функцію яка буде приймати змінну Bool
-    
+
+
     func showSortByPopular() {
-        if sortByPopular == false {
-            sortByPopular = true
-            sortByPrice = false
-            sortByABC = false
-        } else {
-            sortByPopular = false
-        }
+        sortByPopular.toggle()
+        sortByPrice = false
+        sortByABC = false
     }
     
     func showSortByPrice() {
-        if sortByPrice == false {
-            sortByPrice = true
-            sortByPopular = false
-            sortByABC = false
-        } else {
-            sortByPrice = false
-        }
+        sortByPrice.toggle()
+        sortByPopular = false
+        sortByABC = false
     }
     
     func showSortByABC() {
-        if sortByABC == false {
-            sortByABC = true
-            sortByPopular = false
-            sortByPrice = false
-        } else {
-            sortByABC = false
-        }
+        sortByABC.toggle()
+        sortByPopular = false
+        sortByPrice = false
     }
     
 }
+
