@@ -45,7 +45,7 @@ struct MenuItemsOptionView: View {
     
     func showingCheckMark(forCondition menuOptionSection: Bool) -> some View {
         guard menuOptionSection else { return Image("") }
-        return checkMark()
+        return Image(systemName: "checkmark")
     }
     
     //MARK: - Buttons for "SELECTED CATEGORIES"
@@ -54,7 +54,7 @@ struct MenuItemsOptionView: View {
     
     var foodFilterButton: some View {
         Button {
-            menuOption.showFoodSection()
+            menuOption.sectionFood.toggle()
         } label: {
             HStack {
                 Text("Food")
@@ -67,7 +67,7 @@ struct MenuItemsOptionView: View {
     
     var drinkFilterButton: some View {
         Button {
-            menuOption.showDrinkSection()
+            menuOption.sectionDrink.toggle()
         } label: {
             HStack {
                 Text("Drink")
@@ -80,7 +80,7 @@ struct MenuItemsOptionView: View {
 
     var dessertFilterButton: some View {
         Button {
-            menuOption.showDessertsSection()
+            menuOption.sectionDesserts.toggle()
         } label: {
             HStack {
                 Text("Dessert")
@@ -139,7 +139,7 @@ struct MenuItemsOptionView: View {
 struct MenuItemsOptionView_Previews: PreviewProvider {
     static var previews: some View {
         MenuItemsOptionView()
-            .environmentObject(NetworkManager())
+            .environmentObject(MenuItemsViewModel())
             .environmentObject(MenuOption())
     }
 }

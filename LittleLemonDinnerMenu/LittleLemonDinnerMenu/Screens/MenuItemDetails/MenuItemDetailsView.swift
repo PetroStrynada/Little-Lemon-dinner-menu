@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MenuItemDetailsView: View {
     
-    let meal: Meal
+    let meal: MealModel
     
     var body: some View {
         NavigationView {
@@ -45,6 +45,6 @@ struct MenuItemDetailsView: View {
 
 struct MenuItemDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        MenuItemDetailsView(meal: Meal.example)
+        MenuItemDetailsView(meal: MealModel.example)
     }
 }

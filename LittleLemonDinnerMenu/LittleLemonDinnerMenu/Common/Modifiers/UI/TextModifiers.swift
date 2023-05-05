@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-struct TextStyle: ViewModifier {
+struct TextStyleModifier: ViewModifier {
 
-    @State var custom: TextStyling
+    @State var custom: Style
 
-    enum TextStyling {
+    enum Style {
         case sectionHeader
         case header
         case body
@@ -36,15 +36,15 @@ struct TextStyle: ViewModifier {
     }
 }
 
-extension View {
-    func applyTextStyle(_ style: TextStyle) -> some View {
-        modifier(style)
-    }
-}
+//extension View {
+//    func applyTextStyle(_ style: TextStyleModifier) -> some View {
+//        modifier(style)
+//    }
+//}
 
 extension View {
-    func customFont(_ style: TextStyle.TextStyling) -> some View {
-        return self.modifier(TextStyle(custom: style))
+    func customFont(_ style: TextStyleModifier.Style) -> some View {
+        return self.modifier(TextStyleModifier(custom: style))
     }
 }
 

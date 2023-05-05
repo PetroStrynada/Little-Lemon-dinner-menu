@@ -8,20 +8,20 @@
 import SwiftUI
 
 struct GridView: View {
-    @EnvironmentObject var menu: NetworkManager
+    @EnvironmentObject var menu: MenuItemsViewModel
     @EnvironmentObject var menuOption: MenuOption
-    
+
     let columns = [
         GridItem(.adaptive(minimum: 115), alignment: .top) //for 3 line grid
     ]
-    
+
     var body: some View {
         ScrollView {
             LazyVGrid(columns: columns, pinnedViews: .sectionHeaders) {
                 ForEach(menu.sections) { section in
-                    
+
                     //Повторення коду. Винести розділ Section в окреме View
-                    
+
                     if menuOption.sectionFood == false && menuOption.sectionDrink == false && menuOption.sectionDesserts == false {
                         Section {
                             ForEach(section.meal) { meal in
@@ -31,7 +31,7 @@ struct GridView: View {
                                     VStack {
                                         Image(meal.image)
                                             .imageStyleForGrid()
-                                        
+
                                         Text(meal.name)
                                             .bodyStyle()
                                             .multilineTextAlignment(.center)
@@ -48,7 +48,7 @@ struct GridView: View {
                                 .background(.background)
                         }
                     }
-                    
+
                     if menuOption.sectionFood == true && section.name == "Food" {
                         Section {
                             ForEach(section.meal) { meal in
@@ -58,7 +58,7 @@ struct GridView: View {
                                     VStack {
                                         Image(meal.image)
                                             .imageStyleForGrid()
-                                        
+
                                         Text(meal.name)
                                             .bodyStyle()
                                             .multilineTextAlignment(.center)
@@ -75,7 +75,7 @@ struct GridView: View {
                                 .background(.background)
                         }
                     }
-                    
+
                     if menuOption.sectionDrink == true && section.name == "Drinks" {
                         Section {
                             ForEach(section.meal) { meal in
@@ -85,7 +85,7 @@ struct GridView: View {
                                     VStack {
                                         Image(meal.image)
                                             .imageStyleForGrid()
-                                        
+
                                         Text(meal.name)
                                             .bodyStyle()
                                             .multilineTextAlignment(.center)
@@ -102,7 +102,7 @@ struct GridView: View {
                                 .background(.background)
                         }
                     }
-                    
+
                     if menuOption.sectionDesserts == true && section.name == "Dessert" {
                         Section {
                             ForEach(section.meal) { meal in
@@ -112,7 +112,7 @@ struct GridView: View {
                                     VStack {
                                         Image(meal.image)
                                             .imageStyleForGrid()
-                                        
+
                                         Text(meal.name)
                                             .bodyStyle()
                                             .multilineTextAlignment(.center)
@@ -129,9 +129,9 @@ struct GridView: View {
                                 .background(.background)
                         }
                     }
-        
-                    
-                    
+
+
+
                 }
             }
             .padding(.horizontal)
@@ -139,12 +139,21 @@ struct GridView: View {
     }
 }
 
+
 struct GridView_Previews: PreviewProvider {
     static var previews: some View {
         GridView()
-            .environmentObject(NetworkManager())
+            .environmentObject(MenuItemsViewModel())
             .environmentObject(MenuOption())
     }
 }
+
+
+
+
+
+
+
+
 
 
