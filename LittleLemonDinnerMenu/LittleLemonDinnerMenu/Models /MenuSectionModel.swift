@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct MenuSection: Codable, Identifiable {
+struct MenuSectionModel: Codable, Identifiable {
     let id: UUID
     let name: String
-    var meal: [Meal]
+    var meal: [MealModel]
 }

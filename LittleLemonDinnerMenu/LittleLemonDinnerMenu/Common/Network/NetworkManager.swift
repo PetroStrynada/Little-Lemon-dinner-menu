@@ -9,18 +9,9 @@
 import Foundation
 
 class NetworkManager: ObservableObject, Codable {
-    let sections: [MenuSection]
-    
-    init() {
-        do {
-            let url = Bundle.main.url(forResource: "menu", withExtension: ".json")!
-            let data = try Data(contentsOf: url)
-            let menuData = try JSONDecoder().decode(NetworkManager.self, from: data)
-            
-            sections = menuData.sections
-            
-        } catch {
-            fatalError("menu.json file is missing or corrupt")
-        }
+
+    func parse<T: Codable>(_ url: URL) throws -> T {
+        let data = try Data(contentsOf: url)
+        return try JSONDecoder().decode(T.self, from: data)
     }
 }

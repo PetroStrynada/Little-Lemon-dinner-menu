@@ -33,27 +33,7 @@ class MenuOption: ObservableObject {
     
     //Переписати через guard
     //Повтореня коду. Створити одну функцію. Наприклад, записати одну функцію яка буде приймати змінну Bool
-    
-    func showFoodSection() {
-        sectionFood.toggle()
-    }
-    
-    func showDrinkSection() {
-        sectionDrink.toggle()
-    }
-    
-    func showDessertsSection() {
-        sectionDesserts.toggle()
-    }
 
-    func showSectionConditionsCheck() {
-//        if menuOption.sectionFood == false && menuOption.sectionDrink == false && menuOption.sectionDesserts == false {
-//
-//        }
-//        if sectionFood == true && NetworkManager.sections.name == "Food" {
-//            print("hi")
-//        }
-    }
     
     
     //MARK: SORT BY
@@ -82,3 +62,5 @@ class MenuOption: ObservableObject {
     
 }
 
+extension MenuOption {
+}

@@ -3,4 +3,100 @@
    uuid = "427C5733-1BF4-42E0-8ABA-FCA6FE451DC5"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0EC989EC-CA64-48BF-B22C-876A809840FC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LittleLemonDinnerMenu/Common/Network/NetworkManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "NetworkManager"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7DE5ED20-99DB-436C-8FA9-7B2AC9E7AA83"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LittleLemonDinnerMenu/Common/Network/NetworkManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "NetworkManager"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "7DE5ED20-99DB-436C-8FA9-7B2AC9E7AA83 - bdd959790f03671"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LittleLemonDinnerMenu.NetworkManager.deinit"
+                  moduleName = "LittleLemonDinnerMenu"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/petrostrynada/Desktop/My-training-projects/Little-Lemon-dinner-menu/LittleLemonDinnerMenu/LittleLemonDinnerMenu/Common/Network/NetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "7DE5ED20-99DB-436C-8FA9-7B2AC9E7AA83 - f59c98be1f433af3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LittleLemonDinnerMenu.NetworkManager.__deallocating_deinit"
+                  moduleName = "LittleLemonDinnerMenu"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/petrostrynada/Desktop/My-training-projects/Little-Lemon-dinner-menu/LittleLemonDinnerMenu/LittleLemonDinnerMenu/Common/Network/NetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "7DE5ED20-99DB-436C-8FA9-7B2AC9E7AA83 - 96284fbae755a55f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LittleLemonDinnerMenu.NetworkManager.__allocating_init() -&gt; LittleLemonDinnerMenu.NetworkManager"
+                  moduleName = "LittleLemonDinnerMenu"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/petrostrynada/Desktop/My-training-projects/Little-Lemon-dinner-menu/LittleLemonDinnerMenu/LittleLemonDinnerMenu/Common/Network/NetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "7DE5ED20-99DB-436C-8FA9-7B2AC9E7AA83 - c372d7e13e92a1e5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LittleLemonDinnerMenu.NetworkManager.init() -&gt; LittleLemonDinnerMenu.NetworkManager"
+                  moduleName = "LittleLemonDinnerMenu"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/petrostrynada/Desktop/My-training-projects/Little-Lemon-dinner-menu/LittleLemonDinnerMenu/LittleLemonDinnerMenu/Common/Network/NetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "19">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

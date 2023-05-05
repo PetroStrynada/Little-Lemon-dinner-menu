@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Meal: Codable, Identifiable {
+struct MealModel: Codable, Identifiable {
     let id: UUID
     let name: String
     let price: Double
@@ -19,7 +19,7 @@ struct Meal: Codable, Identifiable {
         name.replacingOccurrences(of: " ", with: "-")
     }
     
-    static var example = Meal(id: UUID(), name: "Ukrainian borsch",
+    static var example = MealModel(id: UUID(), name: "Ukrainian borsch",
                               price: 2.48, popularityRank: 1, mealWeight: "350/20/50",
                               ingredients: "Chicken broth, sous-vide chicken fillet, potatoes, carrots, beets, onions, cabbage, tomato paste, parsley. Served with sour cream, pieces of lard and brown bread with garlic sauce")
 }
