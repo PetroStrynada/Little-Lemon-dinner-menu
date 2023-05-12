@@ -7,7 +7,7 @@
 
 import Foundation
 
-class MenuOption: ObservableObject {
+class MenuOptionViewModel: ObservableObject {
     
     @Published  var sectionFood: Bool
     @Published  var sectionDrink: Bool
@@ -62,5 +62,3 @@ class MenuOption: ObservableObject {
     
 }
 
-extension MenuOption {
-}

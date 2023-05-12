@@ -10,7 +10,7 @@ import SwiftUI
 
 struct MenuItemsOptionView: View {
 
-    @EnvironmentObject var menuOption: MenuOption
+    @EnvironmentObject var menuOption: MenuOptionViewModel
     
     @Environment(\.dismiss) var dismiss
     
@@ -139,7 +139,7 @@ struct MenuItemsOptionView: View {
 struct MenuItemsOptionView_Previews: PreviewProvider {
     static var previews: some View {
         MenuItemsOptionView()
-            .environmentObject(MenuItemsViewModel())
-            .environmentObject(MenuOption())
+            .environmentObject(MenuItemsViewModel(MenuOptionViewModel()))
+            .environmentObject(MenuOptionViewModel())
     }
 }
