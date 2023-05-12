@@ -9,7 +9,7 @@ import SwiftUI
 
 struct GridView: View {
     @EnvironmentObject var menu: MenuItemsViewModel
-    @EnvironmentObject var menuOption: MenuOption
+    @EnvironmentObject var menuOption: MenuOptionViewModel
 
     let columns = [
         GridItem(.adaptive(minimum: 115), alignment: .top) //for 3 line grid
@@ -143,8 +143,8 @@ struct GridView: View {
 struct GridView_Previews: PreviewProvider {
     static var previews: some View {
         GridView()
-            .environmentObject(MenuItemsViewModel())
-            .environmentObject(MenuOption())
+            .environmentObject(MenuItemsViewModel(MenuOptionViewModel()))
+            .environmentObject(MenuOptionViewModel())
     }
 }
 

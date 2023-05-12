@@ -34,7 +34,7 @@ struct MenuItemsView: View {
 struct MenuItemsView_Previews: PreviewProvider {
     static var previews: some View {
         MenuItemsView()
-            .environmentObject(MenuItemsViewModel())
-            .environmentObject(MenuOption())
+            .environmentObject(MenuItemsViewModel(MenuOptionViewModel()))
+            .environmentObject(MenuOptionViewModel())
     }
 }

@@ -22,4 +22,6 @@ struct MealModel: Codable, Identifiable {
     static var example = MealModel(id: UUID(), name: "Ukrainian borsch",
                               price: 2.48, popularityRank: 1, mealWeight: "350/20/50",
                               ingredients: "Chicken broth, sous-vide chicken fillet, potatoes, carrots, beets, onions, cabbage, tomato paste, parsley. Served with sour cream, pieces of lard and brown bread with garlic sauce")
+
+    
 }

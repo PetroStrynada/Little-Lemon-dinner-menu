@@ -10,15 +10,15 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         MenuItemsView()
-            .environmentObject(MenuItemsViewModel())
-            .environmentObject(MenuOption())
+            .environmentObject(MenuItemsViewModel(MenuOptionViewModel()))
+            .environmentObject(MenuOptionViewModel())
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .environmentObject(MenuItemsViewModel())
-            .environmentObject(MenuOption())
+            .environmentObject(MenuItemsViewModel(MenuOptionViewModel()))
+            .environmentObject(MenuOptionViewModel())
     }
 }
